@@ -1,4 +1,4 @@
-# Support files for Eloquent javascript
+# Exercises in Eloquent Javascript
 
 My own solutions for some of the exercises in the book [Eloquent Javascript](https://eloquentjavascript.net/).
 These solutions are mostly for demonstrating some techniques when I mentor JS juniors.
