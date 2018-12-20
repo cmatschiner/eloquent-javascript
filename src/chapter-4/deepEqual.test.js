@@ -18,7 +18,12 @@ it("should pass on equal objects", () => {
   expect(actual).toBeTruthy();
 });
 
-it("should fail on objects with an additional property", () => {
+it("should fail on objects with additional props", () => {
+  const actual = deepEqual({}, { b: 3 });
+  expect(actual).toBeFalsy();
+});
+
+it("should fail on objects with an additional property in a nested object", () => {
   const actual = deepEqual(
     { a: 2, b: { x: 1 } },
     { a: 2, b: { x: 1, c: null } }
