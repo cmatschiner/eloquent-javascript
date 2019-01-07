@@ -1,5 +1,5 @@
 // Ecercise 4
-// Function deepEqual - version  1 (slower)
+// Function deepEqual - slower version 
 export default function deepEqual(inputA, inputB) {
   if (inputA === inputB) return true; // test 1: return true if both are identical e.g. the same object instance, array or primitive value
   if (inputA === null || inputB === null) return false; // test 2: return false if one value is null
@@ -14,7 +14,7 @@ export default function deepEqual(inputA, inputB) {
   return true;
 }
 
-// Function deepEqual - version  2  by Bernhard G. (faster)
+// Function deepEqualFast - faster version by Bernhard G. 
 export function deepEqualFaster(inputA, inputB) {
   if (inputA === inputB) return true; // test 1: return true if both are identical e.g. the same object instance, array or primitive value
   if (inputA === null || inputB === null) return false; // test 2: return false if one value is null
