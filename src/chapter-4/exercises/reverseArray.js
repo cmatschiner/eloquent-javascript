@@ -1,3 +1,5 @@
+// Exercise 2
+// Function reverseArray
 function reverseArray(inputArray) {
   let temporaryArray = [];
   for (let element of inputArray) {

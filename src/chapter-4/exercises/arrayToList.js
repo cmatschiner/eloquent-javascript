@@ -1,8 +1,10 @@
+// Exercise 2
+// Function arrayToLiist
 function arrayToList(arrayInput) {
-  arrayLength = arrayInput.length - 1;
+  let arrayLength = arrayInput.length - 1;
   let objectList = { value: arrayInput[arrayLength], rest: null };
   for (let index = arrayLength - 1; index >= 0; index--) {
-    element = arrayInput[index];
+    let element = arrayInput[index];
     objectList = { value: element, rest: objectList };
   }
   return objectList;

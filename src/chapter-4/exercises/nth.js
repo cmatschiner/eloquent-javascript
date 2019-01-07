@@ -1,3 +1,5 @@
+// Exercise 3
+// Function nth
 function nth(objectList, index) {
   let arrayValue = [];
   for (let node = objectList; node; node = node.rest) {

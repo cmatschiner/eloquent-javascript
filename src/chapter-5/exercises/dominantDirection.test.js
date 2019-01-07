@@ -1,0 +1,1 @@
+import dominantDirection from "./dominantDirection";

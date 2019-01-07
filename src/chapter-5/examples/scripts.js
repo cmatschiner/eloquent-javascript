@@ -1,6 +1,5 @@
 // Generated from the Unicode 10 database and https://en.wikipedia.org/wiki/Script_(Unicode)
-
-var SCRIPTS = [
+export var SCRIPTS = [
   {
     name: "Adlam",
     ranges: [[125184, 125259], [125264, 125274], [125278, 125280]],

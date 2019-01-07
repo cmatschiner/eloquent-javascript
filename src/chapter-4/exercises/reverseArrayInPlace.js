@@ -1,6 +1,7 @@
+// Exercise 2
 // Function reverseArrayInPlace - version 1
 function reverseArrayInPlace(arrayValue) {
-  lengthArray = arrayValue.length - 1;
+  let lengthArray = arrayValue.length - 1;
   for (let index = lengthArray; index >= 0; index--) {
     let element = arrayValue[index];
     arrayValue.push(element);
