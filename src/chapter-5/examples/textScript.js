@@ -16,4 +16,7 @@ export default function textScripts(text) {
       return `${Math.round((count * 100) / total)}% ${name}`;
     })
     .join(", ");
+    /* Calling toString on an array gives a result similar to 
+    calling .join(",") on it—it puts commas between the values 
+    in the array. */
 }

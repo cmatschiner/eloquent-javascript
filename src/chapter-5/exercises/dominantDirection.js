@@ -9,6 +9,7 @@ export default function dominantDirection(text) {
     let script = characterScript(char.codePointAt(0));
     return script ? script.direction : "none"; // returns script.direction of each character, or none if latter not in data set SCRIPTS
   }).filter(({ name }) => name !== "none"); // alternative code: (script => script.name != "none")
+  // see chapter Destructuring in book "Elqouent JavaScript"
   if (scripts === []) return "no data"; // test if inout array empty
   if (scripts.length === 1) return scripts[0].name; // test if only one direction
   return scripts.reduce((a, b) => {
