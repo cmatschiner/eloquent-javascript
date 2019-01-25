@@ -15,14 +15,14 @@ class Vec { // Vec prototype
     }
 
      // Method 2: minus
-    minus (object) {
+    minus(object) {
         this.x -= object.x;
         this.y -= object.y;
         return new Vec (this.x, this.y);
     }
 
     // Getter
-    get length () {
+    get length() {
         return (Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2)));
     }
 }
