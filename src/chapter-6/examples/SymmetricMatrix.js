@@ -17,19 +17,38 @@ class Matrix {
     }
 }
 
+/* Some matrices are known to be symmetric. If you mirror a symmetric 
+matrix around its top-left-to-bottom-right diagonal, it stays the same. In 
+other words, the value stored at x,y is always the same as that at y,x. */
+
 class SymmetricMatrix extends Matrix {
+    /* The use of the word extends indicates that this class shouldn’t be 
+    directly based on the default Object prototype but on the class Matrix. 
+    Latter is called the superclass. The derived class SymmetricMatrix is 
+    the subclass. */
     constructor(size, element = (x, y) => undefined) {
-        /* By defining the super() operator as the first item inside the 
-        constructor(), the parent class' constructor is called, and inherits 
-        the members we specify as parameters of super(), as long as they are 
-        defined in Matrix */
+        /* To initialize a SymmetricMatrix instance, the constructor calls 
+        its superclass’s constructor through the super keyword. This is 
+        necessary because if this new object is to behave (roughly) like 
+        the class Matrix, it is going to need the instance properties 
+        that class has. */
       super(size, size, (x, y) => {
+          /* To ensure the matrix is symmetrical, the constructor wraps 
+          the content method to swap the coordinates for values below 
+          the diagonal. */
         if (x < y) return element(y, x);
         else return element(x, y);
       });
     }
+    /* The set method again uses super but this time not to call the 
+    parent classes' constructor but to call a specific method (set) 
+    from the superclass’s set of methods (get and set): */
     set(x, y, value) {
-      super.set(x, y, value); // ???
+      super.set(x, y, value);
+      /* We are redefining set but do want to use the original behavior. 
+      Because this.set refers to the new set method, calling that 
+      wouldn’t work. Inside class methods, super provides a way to call 
+      methods as they were defined in the superclass. */
       if (x != y) {
         super.set(y, x, value);
       }
